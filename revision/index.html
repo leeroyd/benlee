@@ -1,0 +1,318 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Fiche de révision</title>
+	<link href="text.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="scripts/shCore.js"></script>
+	<script type="text/javascript" src="scripts/shBrushCss.js"></script>
+	<script type="text/javascript" src="scripts/html.js"></script>
+	<link type="text/css" rel="stylesheet" href="styles/shCoreRDark.css"/>
+	<link href="css.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26353501-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+
+	<div id="header">
+		<hr />
+		<h1>Fiche de révision interface graphique</h1>
+		<hr />
+	</div>
+	
+	<h2>1.0/ Rotation 3D axe Y</h2>		
+	<div class="gallery1">
+				<img class="rotate" src="images/1.jpg" alt="1" >
+				<img class="rotate" src="images/1.jpg" alt="2" >
+				<img class="rotate" src="images/1.jpg" alt="3" >
+	</div>
+	<pre class="brush: xhtml">
+	
+	#html
+	
+		<div class="gallery1">
+				<img class="rotate" src="images/1.jpg" alt="1" >
+				<img class="rotate" src="images/1.jpg" alt="2" >
+				<img class="rotate" src="images/1.jpg" alt="3" >
+		</div>
+	</pre>
+	<div class="marge">
+	<pre class="brush: css">
+	
+	#CSS
+	
+			
+	.gallery1{
+		width: 100%;
+		-webkit-perspective: 1200;
+		perspective: 1200;
+		-webkit-perspective-origin: 0% 0%;
+		perspective-origin: 0% 0%;
+		background: rgba(0,0,0, 0.2);
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+	}
+	
+	.rotate{
+		width: 28%;
+		margin: 1.2%;
+		border: 10px solid #d9d7d0;
+		border-radius: 5px;
+		-webkit-transition: all 800ms ease;
+		-webkit-transform: rotateY(30deg);
+		background: black;
+	}
+		
+	.gallery1 img:hover {
+		-webkit-transform: rotateY(180deg);
+		transform: rotateY(0deg);
+		border: 10px solid #4FDA00;
+		-webkit-box-shadow: 2px 2px 2px #000;
+	}
+	</pre>
+	</div>
+	<hr />
+	<h2>2.0/ Keyframes</h2>	
+	<div class="gallery2">
+		<a  href="#"></a>
+	</div>	
+	<pre class="brush: xhtml">
+	
+	#html
+	
+		<div class="gallery2">
+			<a  href="#"></a>
+		</div>
+	</pre>
+	<div class="marge">
+	<pre class="brush: css">
+	
+	#CSS
+	
+	
+	gallery2{
+		width: 800px;
+		height: 150px;
+		background: rgba(0,0,0, 0.2);
+		border--webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+		padding-top:50px;
+	}
+	
+	.gallery2 a{
+		background-color: red;
+		height: 100px;
+		width: 100px;
+		top: 50px;
+		display: block;
+		margin: 50px;
+		margin-top:0px;
+		-webkit-animation: pulse 1.5s infinite ease-in-out;
+		-moz-animation: pulse 1.5s infinite ease-in-out;
+		-o-animation: pulse 1.5s infinite ease-in-out;
+		animation: pulse 1.5s infinite ease-in-out;
+	}
+	
+	@-webkit-keyframes pulse{
+		0% {
+			-webkit-box-shadow:0 0 10px rgba(50,200,255,0.1);
+			margin-left:50px;
+		}
+		50% {
+			-webkit-box-shadow:0 0 10px rgba(50,200,255,0.9);
+			margin-left: 650px;
+		}
+		100% {
+			-webkit-box-shadow:0 0 10px rgba(50,200,255,0.1);
+			margin-left: 50px;
+		}
+	}	
+</pre>
+	</div>
+<h2>2.1/ Keyframes variante: Le hover</h2>	
+	<div class="gallery3">
+		<a  href="#"></a>
+		<a  href="#"></a>
+		<a  href="#"></a>
+		<a  href="#"></a>
+	</div>	
+	<pre class="brush: xhtml">
+	
+	#html
+	
+	<div class="gallery3">
+		<a  href="#"></a>
+		<a  href="#"></a>
+		<a  href="#"></a>
+		<a  href="#"></a>
+	</div>	
+	</pre>
+	<div class="marge">
+	<pre class="brush: css">
+	
+	#CSS
+	
+	
+	.gallery3{
+		width: 800px;
+		height: 150px;
+		background: rgba(0,0,0, 0.2);
+		border--webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+		padding-top:50px;
+	}
+	
+	.gallery3 a{
+		background-color: red;
+		height: 100px;
+		width: 100px;
+		top: 50px;
+		display: block;
+		margin: 50px;
+		margin-top: 0;
+		float: left;
+	}
+	.gallery3 a:hover{
+		background-color: red;
+		height: 100px;
+		width: 100px;
+		display: block;
+		margin: 50px;
+		margin-top:0px;
+		-webkit-animation: pulsehover 1.5s infinite ease-in-out;
+		-moz-animation: pulsehover 1.5s infinite ease-in-out;
+		-o-animation: pulsehover 1.5s infinite ease-in-out;
+		animation: pulsehover 1.5s infinite ease-in-out;
+	}
+	
+	@-webkit-keyframes pulsehover{
+		0% {
+			background: green;		
+			margin-left:50px;
+			-webkit-transform: rotate(0deg);
+			-moz-transform: rotate(0deg);
+			-o-transform: rotate(0deg);
+			transform: rotate(0deg);
+		}
+		50% {
+			background: pink;
+		}
+		100% {
+			background: yellow;
+			margin-left: 50px;
+			-webkit-transform: rotate(360deg);
+			-moz-transform: rotate(360deg);
+			-o-transform: rotate(360deg);
+			transform: rotate(360deg);	
+		}
+	}	
+</pre>
+	</div>
+
+<h2>2.2/ Keyframes variante: delayer</h2>	
+	<div class="gallery4">
+		<a  href="#"></a>
+		<a  href="#"></a>
+		<a  href="#"></a>
+		<a  href="#"></a>
+	</div>	
+	<pre class="brush: xhtml">
+	
+	#html
+	
+	<div class="gallery4">
+		<a  href="#"></a>
+		<a  href="#"></a>
+		<a  href="#"></a>
+		<a  href="#"></a>
+	</div>	
+	</pre>
+	<div class="marge">
+	<pre class="brush: css">
+	
+#CSS
+	
+.gallery4{
+	width: 800px;
+	height: 150px;
+	background: rgba(0,0,0, 0.2);
+	border--webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	padding-top:50px;
+}
+
+.gallery4 a{
+	background-color: red;
+	height: 100px;
+	width: 100px;
+	top: 50px;
+	display: block;
+	margin: 50px;
+	margin-top:0px;
+	-webkit-animation: pulseauto 2s infinite ease-in-out;
+	-moz-animation: pulseauto 2s infinite ease-in-out;
+	-o-animation: pulseauto 2s infinite ease-in-out;
+	animation: pulseauto 2s infinite ease-in-out;
+	float: left;
+}
+
+.gallery4 a:nth-child(1){
+	-webkit-animation-delay: 0.5s;
+}
+
+.gallery4 a:nth-child(2){
+	-webkit-animation-delay: 1s;	
+}
+
+.gallery4 a:nth-child(3){
+	-webkit-animation-delay: 1.5s;
+}
+.gallery4 a:nth-child(4){
+	-webkit-animation-delay: 2.0s;
+}
+
+@-webkit-keyframes pulseauto{
+	0% {
+		background: green;		
+		margin-left:50px;
+		-webkit-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+		-webkit-transform: scale(1.2)
+	}
+	20% {
+		background: red;
+		-webkit-transform: scale(1)
+	}
+	100% {
+		background: yellow;
+		margin-left: 50px;
+		-webkit-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+</pre>
+	</div>
+<script type="text/javascript">
+     SyntaxHighlighter.all()
+</script>
+</body>
+</html>
